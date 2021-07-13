@@ -1,0 +1,610 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+/* FIM DO RESET */
+
+/* GRID */
+
+.container {
+  display: flex;
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+/* ELEMENTOS GERAIS */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+p {
+  font-size: 2.4rem;
+  line-height: 1.4;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  max-width: 46rem;
+  padding: 2rem 2rem;
+  background: #f17834;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  box-shadow: 0px 3px 6px #0000004d;
+  border-radius: 5px;
+  margin-top: 4rem;
+}
+
+.bold-span {
+  font-weight: 700;
+}
+
+/* FIM DOS ELEMENTOS GERAIS */
+
+/* Header */
+
+.header {
+  background: url(../imgs/header-desktop.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.header .container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 2rem;
+  min-height: 100vh;
+}
+
+.logo {
+  max-width: 34rem;
+  height: 26rem;
+}
+
+.header h1 {
+  font-size: 4.8rem;
+  max-width: 82rem;
+  font-weight: 500;
+}
+
+/* FIm do Header */
+
+/* Seção: Curso */
+
+.curso {
+  color: #ffffff;
+  background: #f17834;
+}
+
+.curso .container {
+  padding: 6rem 2rem;
+  flex-direction: column;
+  text-align: center;
+}
+
+.curso h1 {
+  align-self: center;
+  width: 34rem;
+  text-transform: uppercase;
+}
+
+.curso h1:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 5px;
+  background: #fff;
+}
+
+.curso p {
+  margin-top: 4rem;
+}
+
+.curso .btn {
+  align-self: center;
+  font-size: 2rem;
+  color: #f17834;
+  background: #fff;
+}
+
+/* Fim Seção: Curso */
+
+/* Seção: Persona */
+
+.persona {
+  padding: 6rem 2rem;
+}
+
+.persona h1 {
+  text-align: center;
+  max-width: 96rem;
+  margin: 0 auto;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.icones {
+  width: 10rem;
+  height: 10rem;
+}
+
+.card {
+  padding: 2rem;
+  background: #f17834;
+  margin-top: 6rem;
+  min-height: 30rem;
+  box-shadow: 0px 3px 6px #b1b0b0;
+}
+
+.card-line {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.cards-titulo {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.cards-texto {
+  margin-top: 3.2rem;
+  font-size: 2rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.caixa-container {
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.caixa-container img {
+  min-width: 70%;
+}
+
+.caixa-persona {
+  margin-top: 4rem;
+  max-width: 58rem;
+  padding: 3rem 5rem;
+  border: 1px solid #f17834;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px #f17834;
+  text-align: center;
+  gap: 14rem;
+}
+
+.caixa-persona h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.caixa-persona ul li {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.caixa-persona ul li:nth-of-type(2),
+.caixa-persona ul li:nth-of-type(6) {
+  font-weight: 700;
+}
+
+.separador {
+  display: block;
+  margin: 1rem auto;
+  width: 2px;
+  height: 20px;
+  background: #f17834;
+}
+
+/* Fim da Seção: Persona */
+
+/* Seção: Modulos */
+
+.modulos {
+  padding: 0rem 2rem 6rem 2rem;
+}
+.modulos .container .line {
+  display: block;
+  height: 5px;
+  width: 70%;
+  margin-left: 2rem;
+  align-self: center;
+  background: #f17834;
+}
+
+.modulo-box-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10rem, 46rem));
+  gap: 20px;
+}
+
+.modulo-box {
+  position: relative;
+  padding: 3rem 2rem;
+  background: #f2f2f2;
+  margin-top: 10rem;
+  min-height: 40rem;
+}
+
+.modulo-box + .modulo-box {
+  margin-top: 10rem;
+}
+
+.modulo-titulo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  background: #f17834;
+  width: 22rem;
+  height: 6rem;
+  box-shadow: 0px 3px 10px #f17834;
+  top: -8%;
+  left: 28%;
+}
+.modulo-numero {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  background: #f17834;
+  width: 22rem;
+  height: 6rem;
+  box-shadow: 0px 3px 10px #f17834;
+  bottom: -8%;
+  left: 28%;
+}
+
+.modulo-box img {
+  width: 35px;
+  height: 35px;
+}
+
+.lista-aulas {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  height: 30rem;
+  justify-content: center;
+}
+
+.aula {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aula + .aula {
+  margin-top: 2rem;
+}
+
+.aula p {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.modulos .btn {
+  margin: 8rem auto 0 auto;
+}
+
+/* Fim da Seção: Modulos */
+
+/* Início Seção de Bônus */
+
+.bonus-curso {
+  padding: 6rem 2rem;
+  background: #f17834;
+  clip-path: polygon(100% 5%, 100% 95%, 0 100%, 0 0);
+  color: #fff;
+}
+
+.bonus-curso .container {
+  flex-direction: column;
+}
+
+.bonus-curso .container h1 {
+  margin-bottom: 6rem;
+}
+
+.bonus {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  font-weight: 500;
+}
+
+.bonus del {
+  font-weight: bold;
+  color: yellow;
+}
+
+.bonus + .bonus {
+  margin-top: 3rem;
+}
+
+.bonus img {
+  width: 10rem;
+  height: 10rem;
+}
+
+/* Fim da Seção: Bônus */
+
+/* Seção Depoimentos */
+
+.depoimentos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+  padding: 0 1rem;
+}
+
+.separador-depoimentos {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #f17834;
+}
+
+.video-wrapper {
+  max-width: 64rem;
+  margin: 5rem auto 0 auto;
+  padding: 0 1rem;
+}
+
+/* This element defines the size the iframe will take.
+   In this example we want to have a ratio of 25:14 */
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* The height of the item will now be 56.25% of the width. */
+  -webkit-box-shadow: 0 0 10px #000000c2;
+  box-shadow: 0 0 10px #000000c2;
+}
+
+/* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+.aspect-ratio iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: none;
+}
+
+.aspect-ratio + .aspect-ratio {
+  margin-top: 4rem;
+}
+
+.depoimentos-prints {
+  display: flex;
+  flex-direction: column;
+}
+
+.depoimentos-lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 2rem;
+}
+
+.separador-depoimentos:nth-of-type(2) {
+  margin-top: 6rem;
+}
+/* Fim da Seção DEPOIMENTOS */
+
+/* Seção: Oferta */
+
+.oferta {
+  max-width: 144rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.oferta img {
+  max-width: 22rem;
+}
+
+.oferta h1 {
+  text-transform: uppercase;
+  color: #f17834;
+  font-size: 4rem;
+}
+
+.caixa-oferta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 3rem;
+  background: #f5f1f1;
+  margin: 4rem 0;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.caixa-oferta s {
+  color: red;
+}
+
+.caixa-oferta p:nth-of-type(1) {
+  max-width: 46rem;
+}
+
+.caixa-oferta p:nth-of-type(2) {
+  text-transform: uppercase;
+  max-width: 38rem;
+  font-weight: 500;
+}
+
+.caixa-oferta span {
+  font-size: 3rem;
+}
+
+.caixa-oferta .btn {
+  font-size: 1.8rem;
+}
+
+.garantia {
+  margin-bottom: 4rem;
+}
+
+.separador-oferta {
+  display: block;
+  width: 5px;
+  height: 60px;
+  margin: 10px auto;
+  background: #f17834;
+}
+
+.oferta .separador-depoimentos {
+  margin-top: 6rem;
+}
+/* Fim da Oferta */
+
+/* Seção: Sobre */
+
+.sobre-wrapper {
+  background: #fbf3ef;
+  padding: 6rem 2rem;
+}
+
+.sobre-grid {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.sobre-grid h1 {
+  text-transform: uppercase;
+  color: #f17834;
+}
+.sobre-texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sobre-texto img {
+  max-width: 50rem;
+}
+
+.texto-wrapper p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  flex-shrink: 2;
+  margin-top: 3rem;
+}
+
+.texto-wrapper p + p {
+  margin-top: 3rem;
+}
+
+/* Fim da Seção Sobre */
+
+/* Last CTA */
+
+.last-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 65rem;
+  color: #f2f2f2;
+  padding: 6rem;
+  background: url(../imgs/mapa@2x.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.last-cta h1 {
+  max-width: 96rem;
+}
+
+.last-cta .btn {
+  font-size: 1.6rem;
+}
+
+/* Fim do LAST CTA */
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f17834;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer p {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+footer p + p {
+  margin-top: 2rem;
+}
