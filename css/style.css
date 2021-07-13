@@ -1,79 +1,77 @@
-/* RESET */
-
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 html {
   font-size: 62.5%;
 }
-
-ul,
+a,
 li,
-a {
+ul {
   list-style: none;
   text-decoration: none;
 }
-
-/* FIM DO RESET */
-
-/* GRID */
-
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 144rem;
   margin: 0 auto;
 }
-
-/* ELEMENTOS GERAIS */
-
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 1.6rem;
 }
-
 h1 {
   font-size: 2.8rem;
   line-height: 1;
 }
-
 p {
   font-size: 2.4rem;
   line-height: 1.4;
 }
-
 img {
   display: block;
   width: 100%;
 }
-
 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 46rem;
   padding: 2rem 2rem;
   background: #f17834;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-transform: uppercase;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   font-size: 2.8rem;
   font-weight: 700;
-  box-shadow: 0px 3px 6px #0000004d;
+  -webkit-box-shadow: 0 3px 6px #0000004d;
+  box-shadow: 0 3px 6px #0000004d;
   border-radius: 5px;
   margin-top: 4rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-
+.btn:hover {
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+  -webkit-box-shadow: 0 0 20px #f17834;
+  box-shadow: 0 0 20px #f17834;
+}
 .bold-span {
   font-weight: 700;
 }
-
-/* FIM DOS ELEMENTOS GERAIS */
-
-/* Header */
-
 .header {
   background: url(../imgs/header-desktop.jpg);
   background-position: center center;
@@ -83,47 +81,48 @@ img {
   max-width: 100vw;
   min-height: 100vh;
 }
-
 .header .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   padding: 0 2rem;
   min-height: 100vh;
 }
-
 .logo {
   max-width: 34rem;
   height: 26rem;
 }
-
 .header h1 {
   font-size: 4.8rem;
   max-width: 82rem;
   font-weight: 500;
 }
-
-/* FIm do Header */
-
-/* Seção: Curso */
-
 .curso {
-  color: #ffffff;
+  color: #fff;
   background: #f17834;
 }
-
 .curso .container {
   padding: 6rem 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
 }
-
 .curso h1 {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
-  width: 34rem;
+  max-width: 34rem;
   text-transform: uppercase;
 }
-
 .curso h1:after {
   content: "";
   display: block;
@@ -132,26 +131,20 @@ img {
   margin-top: 5px;
   background: #fff;
 }
-
 .curso p {
   margin-top: 4rem;
 }
-
 .curso .btn {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   font-size: 2rem;
   color: #f17834;
   background: #fff;
 }
-
-/* Fim Seção: Curso */
-
-/* Seção: Persona */
-
 .persona {
   padding: 6rem 2rem;
 }
-
 .persona h1 {
   text-align: center;
   max-width: 96rem;
@@ -159,82 +152,85 @@ img {
   font-weight: 500;
   line-height: 1.4;
 }
-
 .icones {
   width: 10rem;
   height: 10rem;
 }
-
 .card {
   padding: 2rem;
   background: #f17834;
   margin-top: 6rem;
   min-height: 30rem;
-  box-shadow: 0px 3px 6px #b1b0b0;
+  -webkit-box-shadow: 0 3px 6px #b1b0b0;
+  box-shadow: 0 3px 6px #b1b0b0;
 }
-
 .card-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 20px;
 }
-
 .cards-container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: minmax(10rem, 1fr) 2rem minmax(10rem, 1fr) 2rem
+    minmax(10rem, 1fr);
+  grid-template-columns: repeat(3, minmax(10rem, 1fr));
   gap: 2rem;
 }
-
 .cards-titulo {
   font-size: 2.8rem;
   font-weight: 500;
   color: #fff;
 }
-
 .cards-texto {
   margin-top: 3.2rem;
   font-size: 2rem;
   line-height: 1.4;
   color: #fff;
 }
-
 .caixa-container {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 4rem;
 }
-
 .caixa-container img {
   min-width: 70%;
 }
-
 .caixa-persona {
   margin-top: 4rem;
   max-width: 58rem;
   padding: 3rem 5rem;
   border: 1px solid #f17834;
   border-radius: 5px;
-  box-shadow: 0px 0px 6px #f17834;
+  -webkit-box-shadow: 0 0 6px #f17834;
+  box-shadow: 0 0 6px #f17834;
   text-align: center;
   gap: 14rem;
 }
-
 .caixa-persona h2 {
   font-size: 2.4rem;
   margin-bottom: 3rem;
 }
-
 .caixa-persona ul li {
   text-transform: uppercase;
   font-weight: 500;
 }
-
 .caixa-persona ul li:nth-of-type(2),
 .caixa-persona ul li:nth-of-type(6) {
   font-weight: 700;
 }
-
 .separador {
   display: block;
   margin: 1rem auto;
@@ -242,29 +238,27 @@ img {
   height: 20px;
   background: #f17834;
 }
-
-/* Fim da Seção: Persona */
-
-/* Seção: Modulos */
-
 .modulos {
-  padding: 0rem 2rem 6rem 2rem;
+  padding: 0 2rem 6rem 2rem;
 }
 .modulos .container .line {
   display: block;
   height: 5px;
   width: 70%;
   margin-left: 2rem;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   background: #f17834;
 }
-
 .modulo-box-container {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: minmax(10rem, 46rem) 20px minmax(10rem, 46rem) 20px
+    minmax(10rem, 46rem);
   grid-template-columns: repeat(3, minmax(10rem, 46rem));
   gap: 20px;
 }
-
 .modulo-box {
   position: relative;
   padding: 3rem 2rem;
@@ -272,15 +266,19 @@ img {
   margin-top: 10rem;
   min-height: 40rem;
 }
-
 .modulo-box + .modulo-box {
   margin-top: 10rem;
 }
-
 .modulo-titulo {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 2rem;
   font-weight: 500;
@@ -288,14 +286,21 @@ img {
   background: #f17834;
   width: 22rem;
   height: 6rem;
-  box-shadow: 0px 3px 10px #f17834;
+  -webkit-box-shadow: 0 3px 10px #f17834;
+  box-shadow: 0 3px 10px #f17834;
   top: -8%;
   left: 28%;
 }
 .modulo-numero {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 2rem;
   font-weight: 500;
@@ -303,119 +308,122 @@ img {
   background: #f17834;
   width: 22rem;
   height: 6rem;
-  box-shadow: 0px 3px 10px #f17834;
+  -webkit-box-shadow: 0 3px 10px #f17834;
+  box-shadow: 0 3px 10px #f17834;
   bottom: -8%;
   left: 28%;
 }
-
 .modulo-box img {
   width: 35px;
   height: 35px;
 }
-
 .lista-aulas {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-top: 2rem;
   height: 30rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
-
 .aula {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 10px;
 }
-
 .aula + .aula {
   margin-top: 2rem;
 }
-
 .aula p {
   font-size: 1.6rem;
   font-weight: 500;
 }
-
 .modulos .btn {
   margin: 8rem auto 0 auto;
 }
-
-/* Fim da Seção: Modulos */
-
-/* Início Seção de Bônus */
-
 .bonus-curso {
   padding: 6rem 2rem;
   background: #f17834;
+  -webkit-clip-path: polygon(100% 5%, 100% 95%, 0 100%, 0 0);
   clip-path: polygon(100% 5%, 100% 95%, 0 100%, 0 0);
   color: #fff;
 }
-
 .bonus-curso .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
-
 .bonus-curso .container h1 {
   margin-bottom: 6rem;
 }
-
 .bonus {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 3rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-weight: 500;
 }
-
 .bonus del {
-  font-weight: bold;
-  color: yellow;
+  font-weight: 700;
+  color: #ff0;
 }
-
 .bonus + .bonus {
   margin-top: 3rem;
 }
-
 .bonus img {
   width: 10rem;
   height: 10rem;
 }
-
-/* Fim da Seção: Bônus */
-
-/* Seção Depoimentos */
-
+.bonus-btn {
+  margin: 3rem auto;
+  max-width: 36rem;
+}
 .depoimentos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 6rem;
   padding: 0 1rem;
+  text-align: center;
 }
-
 .separador-depoimentos {
   display: block;
   width: 100%;
   height: 5px;
   background: #f17834;
 }
-
 .video-wrapper {
   max-width: 64rem;
   margin: 5rem auto 0 auto;
   padding: 0 1rem;
 }
-
-/* This element defines the size the iframe will take.
-   In this example we want to have a ratio of 25:14 */
 .aspect-ratio {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* The height of the item will now be 56.25% of the width. */
+  padding-bottom: 56.25%;
   -webkit-box-shadow: 0 0 10px #000000c2;
   box-shadow: 0 0 10px #000000c2;
 }
-
-/* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
 .aspect-ratio iframe {
   position: absolute;
   width: 100%;
@@ -424,89 +432,103 @@ img {
   top: 0;
   border: none;
 }
-
 .aspect-ratio + .aspect-ratio {
   margin-top: 4rem;
 }
-
 .depoimentos-prints {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
-
 .depoimentos-lista {
+  padding: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
-  gap: 2rem;
+  gap: 3rem;
 }
-
-.separador-depoimentos:nth-of-type(2) {
-  margin-top: 6rem;
-}
-/* Fim da Seção DEPOIMENTOS */
-
-/* Seção: Oferta */
-
 .oferta {
   max-width: 144rem;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   padding: 6rem 1rem;
 }
-
 .oferta img {
   max-width: 22rem;
 }
-
 .oferta h1 {
   text-transform: uppercase;
   color: #f17834;
   font-size: 4rem;
 }
-
 .caixa-oferta {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 6rem 3rem;
   background: #f5f1f1;
   margin: 4rem 0;
-  box-shadow: 0px 3px 6px #00000029;
+  -webkit-box-shadow: 0 3px 6px #00000029;
+  box-shadow: 0 3px 6px #00000029;
 }
-
 .caixa-oferta s {
   color: red;
 }
-
 .caixa-oferta p:nth-of-type(1) {
   max-width: 46rem;
 }
-
 .caixa-oferta p:nth-of-type(2) {
   text-transform: uppercase;
   max-width: 38rem;
   font-weight: 500;
 }
-
 .caixa-oferta span {
   font-size: 3rem;
 }
-
 .caixa-oferta .btn {
   font-size: 1.8rem;
 }
-
 .garantia {
   margin-bottom: 4rem;
 }
-
 .separador-oferta {
   display: block;
   width: 5px;
@@ -514,61 +536,69 @@ img {
   margin: 10px auto;
   background: #f17834;
 }
-
 .oferta .separador-depoimentos {
   margin-top: 6rem;
 }
-/* Fim da Oferta */
-
-/* Seção: Sobre */
-
 .sobre-wrapper {
   background: #fbf3ef;
   padding: 6rem 2rem;
 }
-
 .sobre-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   max-width: 144rem;
   margin: 0 auto;
 }
-
 .sobre-grid h1 {
   text-transform: uppercase;
   color: #f17834;
 }
 .sobre-texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 2rem;
 }
-
 .sobre-texto img {
   max-width: 50rem;
 }
-
 .texto-wrapper p {
   font-size: 1.8rem;
   line-height: 1.6;
+  -ms-flex-negative: 2;
   flex-shrink: 2;
   margin-top: 3rem;
 }
-
 .texto-wrapper p + p {
   margin-top: 3rem;
 }
-
-/* Fim da Seção Sobre */
-
-/* Last CTA */
-
 .last-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   min-height: 65rem;
   color: #f2f2f2;
@@ -577,34 +607,295 @@ img {
   background-size: cover;
   background-position: center center;
 }
-
 .last-cta h1 {
+  text-align: center;
   max-width: 96rem;
 }
-
 .last-cta .btn {
   font-size: 1.6rem;
 }
-
-/* Fim do LAST CTA */
-
-/* Footer */
-
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background: #f17834;
   padding: 2rem 1rem;
   text-align: center;
 }
-
 footer p {
   color: #fff;
   font-size: 1.4rem;
 }
-
 footer p + p {
   margin-top: 2rem;
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+  .modulo-titulo {
+    left: 20%;
+  }
+  .modulo-numero {
+    left: 20%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .modulo-titulo {
+    height: 5rem;
+    left: 24%;
+  }
+  .modulo-numero {
+    height: 5rem;
+    left: 24%;
+  }
+  .modulos .container h1 {
+    font-size: 2rem;
+  }
+  .modulo-box-container {
+    grid-template-columns: repeat(2, minmax(24rem, 46rem));
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .modulo-box-container {
+    grid-template-columns: repeat(1, minmax(24rem, 46rem));
+  }
+  .modulo-titulo {
+    height: 4rem;
+    top: -5%;
+    left: 26%;
+  }
+  .modulo-numero {
+    height: 4rem;
+    bottom: -5%;
+    left: 26%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  .header h1 {
+    font-size: 3.6rem;
+  }
+  .caixa-persona {
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header {
+    background: url(../imgs/header-laptop1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .header h1 {
+    font-size: 3.6rem;
+    max-width: 55rem;
+  }
+  .sobre-texto {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: centert;
+    -ms-flex-align: centert;
+    align-items: centert;
+    margin-top: 3rem;
+  }
+  .sobre-texto img {
+    max-width: 40rem;
+  }
+  .texto-wrapper {
+    text-align: center;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .header {
+    min-height: 60vh;
+  }
+  .header .container {
+    min-height: 60vh;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .header {
+    min-height: 100vh;
+  }
+  .header .container {
+    min-height: 100vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cards-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(10rem, 1fr) 2rem minmax(10rem, 1fr) 2rem
+      minmax(10rem, 1fr);
+    grid-template-columns: repeat(3, minmax(10rem, 1fr));
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    background: url(../imgs/header-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .header .container h1 {
+    font-size: 3.6rem;
+    text-align: center;
+    max-width: 56rem;
+  }
+  .logo {
+    max-width: 19rem;
+    height: 14rem;
+  }
+  .modulos .container h1 {
+    margin: 0 auto;
+  }
+  .modulos .container .line {
+    display: none;
+  }
+  .cards-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(10rem, 1fr);
+    grid-template-columns: repeat(1, minmax(10rem, 1fr));
+    gap: 2rem;
+  }
+  .persona {
+    padding: 5rem 2rem;
+  }
+  .card:nth-of-type(1) {
+    margin-top: 5rem;
+  }
+  .card + .card {
+    margin-top: 2rem;
+  }
+  .caixa-container {
+    margin-top: 0;
+  }
+  .modulos .container h1 {
+    font-size: 3.6rem;
+  }
+  .modulo-box {
+    margin-top: 6rem;
+    gap: 0;
+  }
+  .modulo-box + .modulo-box {
+    margin-top: 6rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 52%;
+  }
+  .header {
+    background: url(../imgs/header-mobile@2x.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .header .container {
+    padding-top: 4rem;
+  }
+  .header .container h1 {
+    font-size: 3.2rem;
+  }
+  .header .container .btn {
+    font-size: 1.8rem;
+  }
+  .curso .container,
+  .persona {
+    padding: 3rem 2rem;
+  }
+  .card:nth-of-type(1) {
+    margin-top: 3rem;
+  }
+  .card + .card {
+    margin-top: 1rem;
+  }
+  .caixa-container {
+    margin-top: 0;
+  }
+  .modulos .container h1 {
+    font-size: 3rem;
+  }
+  .modulos .btn {
+    font-size: 1.8rem;
+  }
+  .oferta {
+    padding: 3rem 2rem;
+  }
+  .bonus-btn {
+    font-size: 1.8rem;
+  }
+  .modulo-titulo {
+    left: 25%;
+  }
+  .modulo-numero {
+    left: 25%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .header .container h1 {
+    font-size: 2.8rem;
+  }
+  .modulo-titulo {
+    left: 20%;
+  }
+  .modulo-numero {
+    left: 20%;
+  }
+}
+.example {
+  display: -ms-grid;
+  display: grid;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(white),
+    to(black)
+  );
+  background: -o-linear-gradient(top, #fff, #000);
+  background: linear-gradient(to bottom, #fff, #000);
 }
